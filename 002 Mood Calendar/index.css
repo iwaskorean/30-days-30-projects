@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+:root {
+    --mood-1: #40eb90;
+    --mood-2: #c1eb92;
+    --mood-3: #3d6d63;
+    --mood-4: #aa5205;
+    --mood-5: #cc1812;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Muli';
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.wrapper {
+    min-height: 100vh;
+    min-width: 23rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    text-align: center;
+    margin: 2rem 0 ;
+}
+.header p {
+    font-weight: 400;
+}
+
+.header__title {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.header__moods{
+    margin: 0.5rem 0;
+}
+
+.header__moods--button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+.header__moods--button i {
+    font-size: 2rem;
+}
+
+.far {
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s;
+}
+.far:hover{
+    transform: scale(1.3);
+}
+.active{
+    transform: scale(1.3);
+}
+
+.fa-laugh {
+    color: var(--mood-1);
+}
+.fa-smile{
+    color: var(--mood-2);
+}
+.fa-meh {
+    color: var(--mood-3);
+}
+.fa-frown {
+    color: var(--mood-4);
+}
+.fa-sad-tear {
+    color: var(--mood-5);
+}
+
+.calendar {
+    width: 70%;
+    text-align: center;
+}
+
+.calendar__title {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    margin: 1rem 0;
+}
+
+.calendar__container {
+    height: 40vh;
+    min-width: 20rem;
+    min-height: 17rem;
+    display: grid;
+    border: 3px solid black;
+    border-radius: 10px;
+    grid-template-columns: repeat(7, minmax(40px, 1fr));
+    grid-template-rows: repeat(6, minmax(40px, 1fr));
+    align-items: center;
+    justify-items: center;
+}
+
+.week-day {
+    font-size: 1.5rem;
+}
+.day{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: #797575;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.day1 { 
+    grid-column: 2;
+}
+
+@media(max-width:600px) {
+    html {
+        font-size: 14px;
+    }
+    .day {
+        width: 30px;
+        height: 30px;
+    }
+    .calendar {
+        width: 95%;
+    }
+    .calendar__container {
+        min-height: 20rem;
+    }
+}
