@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+
+%flex-col-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+%hover-effect {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    @extend %flex-col-centered;
+    justify-content: flex-start;
+    min-width: 500px;
+    min-height: 100vh;
+    background: no-repeat linear-gradient(to right bottom, rgb(251, 255, 240), rgb(246, 253, 204), rgb(122, 144, 241));
+    h1{
+        letter-spacing: 4px;
+        font-weight: 900;
+        margin-top: 2rem;
+        text-align: center;
+    }
+    .button-get {
+        background-color: tomato;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-weight: 700;
+        border-radius: 5px;
+        box-shadow: 3px 3px 10px rgba(170, 167, 167, 0.781);
+        padding: 1rem 2rem;
+        margin: 2rem;
+        transition: all 0.3s;
+        &:hover {
+            @extend %hover-effect;
+        }
+    }
+
+
+    .container {
+    	display: flex;
+    	flex-wrap: wrap;
+    	align-items: space-between;
+    	justify-content: center;
+    	margin: 0 auto;
+        // max-width: 1000px;
+        
+        .card {
+            @extend %flex-col-centered;
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(170, 167, 167, 0.781);
+            margin: 2rem 1rem;
+            text-align: center;
+            &:hover{
+                @extend %hover-effect;
+            }
+            .image-box {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .image-poke {
+                    width: 150px;
+                    height: 150px;
+                    // margin: 1rem;
+                }
+            }
+            .typo-box {
+                .name {
+                    font-size: 1.1rem;
+                    font-weight: 900;
+                }
+                .type {
+                    font-size: 0.9rem;
+                    color: rgb(77, 75, 75);
+                }
+            }
+        }
+    }
+
+}
