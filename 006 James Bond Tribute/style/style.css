@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css?family=Holtwood+One+SC|Lora&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+.wrapper .container, .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  font-family: "Holtwood One SC";
+}
+.wrapper .container {
+  width: 80%;
+}
+.wrapper .container .row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+}
+.wrapper .container .row h2 {
+  position: relative;
+}
+.wrapper .container .row .box {
+  height: 300px;
+  padding: 16px;
+}
+.wrapper .container .row .box ul {
+  list-style-type: none;
+  font-family: "Muli";
+}
+.wrapper .container .row .box .name {
+  margin: 16px 0;
+}
+.wrapper .container .row .box .kkk {
+  font-size: 100px;
+  opacity: 0.2;
+  position: absolute;
+  top: 120px;
+  left: 10%;
+}
+.wrapper .container .row .box.box1, .wrapper .container .row .box.box15 {
+  background-color: #c4c4c4;
+  color: #fff;
+  text-align: right;
+}
+.wrapper .container .row:nth-child(2n+1) .box:nth-child(1) {
+  background-color: #c4c4c4;
+  color: #fff;
+  text-align: right;
+}
+.wrapper .container .row:nth-child(2n) .box:nth-child(1) {
+  text-align: right;
+}
+.wrapper .container .row:nth-child(2n) .box:nth-child(2) {
+  background-color: #c4c4c4;
+  color: #fff;
+}
+.wrapper .container .row .hide {
+  display: none;
+}
+.wrapper .container .row .box.box1, .wrapper .container .row .box.box2, .wrapper .container .row .box.box15, .wrapper .container .row .box.box16 {
+  height: 120px;
+  font-size: 50px;
+}
+.wrapper .container .row .box.box4 {
+  background: no-repeat url("https://www.screengeek.net/wp-content/uploads/2018/08/james-bond-daniel-craig.jpg") 100% 0%;
+  background-size: cover;
+}
+.wrapper .container .row .box.box5 {
+  background: no-repeat url("http://i.imgur.com/4MspLjL.jpg") 100% 0%;
+  background-size: cover;
+}
+.wrapper .container .row .box.box9 {
+  background: no-repeat url("https://images.indianexpress.com/2015/11/james-bond-roger-moore.jpg") 100% 20%;
+  background-size: cover;
+}
+.wrapper .container .row .box.box10 ul {
+  font-size: 12px;
+}
+.wrapper .container .row .box.box12 {
+  background: no-repeat url("https://cdn-stream.httpid.com/c201/wp-content/uploads/2015/10/George-Lazenby-Best-Bond.jpg") 100% 0%;
+  background-size: cover;
+}
+.wrapper .container .row .box.box13 {
+  background: no-repeat url("https://imgc.artprintimages.com/img/print/007-james-bond-dr-no-1962_u-l-q10ts640.jpg") 100% 0%;
+  background-size: cover;
+}
+@media (max-width: 1000px) {
+  .wrapper .container {
+    width: 100%;
+  }
+  .wrapper .container .row {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .wrapper .container .row .box {
+    height: auto;
+  }
+  .wrapper .container .row .hide {
+    display: block;
+  }
+  .wrapper .container .row:nth-child(2n+1) .box:nth-child(1) {
+    order: -1;
+    height: 400px;
+  }
+  .wrapper .container .row:nth-child(2n) .box:nth-child(2) {
+    order: -1;
+    height: 400px;
+  }
+  .wrapper .container .row .name {
+    font-size: 40px;
+  }
+  .wrapper .container .row .box.box1.hide {
+    height: 100px;
+  }
+  .wrapper .container .row .box.box10 ul {
+    font-size: 20px;
+  }
+  .wrapper .container .row ul {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+  }
+  .wrapper .container .show {
+    display: none;
+  }
+  .wrapper .container .box.box1.hide {
+    display: block;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
