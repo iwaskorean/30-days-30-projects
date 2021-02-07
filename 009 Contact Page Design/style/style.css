@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+.wrapper .container, .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Muli";
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+.wrapper {
+  min-height: 100vh;
+  background: linear-gradient(to right bottom, #ed73c8, #ff6b96);
+}
+.wrapper .container {
+  width: 70%;
+  background-color: #fff;
+  padding: 2rem 3rem;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 0.5rem;
+  border: 3px solid #000;
+  box-shadow: 3px 3px 5px rgba(70, 69, 69, 0.781);
+}
+.wrapper .container h2 {
+  margin: 1rem;
+}
+.wrapper .container p {
+  margin: 0.5rem;
+}
+.wrapper .container form input,
+.wrapper .container form textarea {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  border: 1px solid #000;
+}
+.wrapper .container form input::placeholder,
+.wrapper .container form textarea::placeholder {
+  color: #969696;
+}
+.wrapper .container form input:focus,
+.wrapper .container form textarea:focus {
+  border: 1px solid red;
+  outline: 0;
+}
+.wrapper .container form textarea {
+  resize: none;
+  font-family: "Muli";
+}
+.wrapper .container form .button-submit {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  font-family: "Muli";
+  color: #fff;
+  background: linear-gradient(to right, #ed73c8, #ff6b96);
+  border: 0;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

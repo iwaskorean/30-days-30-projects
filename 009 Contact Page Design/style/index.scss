@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+$pink-1: #ed73c8;
+$pink-2: #ff6b96;
+%flex-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Muli';
+  @media (max-width: 500px) {
+    font-size: 13px;
+  }
+}
+
+.wrapper {
+  min-height: 100vh;
+  background: linear-gradient(to right bottom, $pink-1, $pink-2);
+  @extend %flex-centered;
+  .container {
+    width: 70%;
+    background-color: #fff;
+    padding: 2rem 3rem;
+    @extend %flex-centered;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 0.5rem;
+    border: 3px solid #000;
+    box-shadow: 3px 3px 5px rgba(70, 69, 69, 0.781);
+    h2 {
+      margin: 1rem;
+    }
+    p {
+      margin: 0.5rem;
+    }
+    form {
+      input,
+      textarea {
+        width: 100%;
+        margin: 0.5rem 0;
+        padding: 0.5rem 1rem;
+        border-radius: 3px;
+        border: 1px solid #000;
+        &::placeholder {
+          color: rgb(150, 150, 150);
+        }
+        &:focus {
+          border: 1px solid red;
+          outline: 0;
+        }
+      }
+      textarea {
+        resize: none;
+        font-family: 'Muli';
+      }
+      .button-submit {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        font-size: 1.1rem;
+        font-family: 'Muli';
+        color: #fff;
+        background: linear-gradient(to right, $pink-1, $pink-2);
+        border: 0;
+        border-radius: 5px;
+      }
+    }
+  }
+}

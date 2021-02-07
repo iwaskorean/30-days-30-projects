@@ -3,5 +3,5 @@
 
 - It's a challenge to improve my programming skills by building projects
 
-- You can grab this challenge at [HERE!](https://www.florin-pop.com/blog/2019/09/100-days-100-projects/)
+- You can grab this challenge [HERE!](https://www.florin-pop.com/blog/2019/09/100-days-100-projects/)
 
