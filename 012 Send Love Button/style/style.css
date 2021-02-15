@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+.button--love, .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+button {
+  font-family: "Muli";
+  font-size: 20px;
+}
+
+.wrapper {
+  min-height: 100vh;
+  background-color: #f1f1f1;
+}
+.wrapper .heart {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  color: #e7273f;
+  font-size: 30px;
+  transform: translateY(0%);
+  animation: fly 1s linear forwards;
+}
+
+.button--love {
+  background-color: #e7273f;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  color: #fff;
+  border: 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 25px;
+  width: 350px;
+  cursor: pointer;
+  outline: 0;
+}
+.button--love .icon__box {
+  background-color: #fff;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-right: 1px solid #eee;
+  color: #e7273f;
+  padding: 20px 25px;
+  position: relative;
+}
+.button--love .text {
+  padding: 0 25px;
+  flex: 1;
+  text-align: center;
+}
+.button--love .text .text--gray {
+  color: #aaa;
+}
+
+@keyframes fly {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-500%);
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
