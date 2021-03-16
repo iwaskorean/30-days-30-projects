@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: "Monument Extended", sans-serif;
+  background: no-repeat url(https://media.giphy.com/media/3oEduMhFrYvKk4giac/giphy.gif) 50% 50%;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.menu {
+  font-size: 7vw;
+  overflow: hidden;
+  color: #fff;
+}
+.menu .menu__item {
+  position: relative;
+  padding: 0 6vw;
+}
+.menu .menu__item .menu__item-link {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  -webkit-text-stroke: 1.5px #ffff;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  transition: opacity 0.4s;
+  white-space: nowrap;
+  font-size: 7vw;
+  padding: 0 1vw;
+  font-weight: 900;
+  line-height: 1.15;
+}
+.menu .menu__item .menu__item-link::before {
+  all: initial;
+  font-family: sofia-pro, sans-serif;
+  counter-increment: menu;
+  position: absolute;
+  bottom: 60%;
+  left: 0;
+  pointer-events: none;
+}
+.menu .menu__item .menu__item-link:hover {
+  transition-duration: 0.1s;
+  opacity: 0;
+}
+.menu .menu__item .menu__item-link:hover + .menu__item-img {
+  opacity: 1;
+  transform: translate3d(calc(-100% - 6vw), -30%, 0);
+  transition: all 0.3s;
+}
+.menu .menu__item .menu__item-link:hover ~ .marquee .marquee__inner {
+  width: fit-content;
+  animation-play-state: running;
+  opacity: 1;
+  transition-duration: 0.4s;
+}
+.menu .menu__item .menu__item-img {
+  height: 50vh;
+  pointer-events: none;
+  position: absolute;
+  max-height: 400px;
+  opacity: 0;
+  left: 100%;
+  top: 50%;
+}
+.menu .menu__item .marquee {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: #fff;
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+.menu .menu__item .marquee span {
+  white-space: nowrap;
+  font-size: 7vw;
+  padding: 0 1vw;
+  font-weight: 900;
+  line-height: 1.2;
+  font-style: italic;
+}
+.menu .menu__item .marquee .marquee__inner {
+  width: fit-content;
+  display: flex;
+  position: relative;
+  animation: marquee 5s linear infinite;
+  animation-play-state: paused;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(calc(-25% + 20vw), 0, 0);
+  }
+  100% {
+    transform: translate3d(calc(-50% + 20vw), 0, 0);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
